@@ -71,10 +71,17 @@ const showDetailsModalHandler = phone => {
     show_details_modal.showModal();
     
     const showDetails = document.getElementById('show-details-phone');
+    showDetails.classList.add('space-y-6')
     showDetails.innerHTML = `
     <img src="${phone.image}" alt="">
     <h3 class="font-bold text-lg">${phone.name}</h3>
     <p class="font-medium">Storage: ${phone.mainFeatures.storage}</p>
+    <p class="font-medium">Display Size: ${phone.mainFeatures.displaySize}</p>
+    <p class="font-medium">Chipset: ${phone.mainFeatures.chipSet}</p>
+    <p class="font-medium">Memory: ${phone.mainFeatures.memory}</p>
+    <p class="font-medium">Slug: ${phone.slug}</p>
+    <p class="font-medium">Release Date: ${phone.releaseDate}</p>
+    <p class="font-medium">Brand: ${phone.brand}</p>
     <p class="font-medium">GPS: ${phone?.others?.GPS}</p>
     `;
 }
